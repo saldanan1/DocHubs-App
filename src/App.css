@@ -3,26 +3,33 @@
 }
 #nav {
   width: 100%;
-  float: left;
   margin: 0 0 3em 0;
   padding: 0;
   list-style: none;
-  background-color: #f2f2f2;
+  background-color: #e8f1f5;
   border-bottom: 1px solid #ccc; 
-  border-top: 1px solid #ccc; }
-
+  border-top: 1px solid #ccc; 
+}
+#nav :hover{
+  color: black;
+}
 #nav a {
-  padding: 8px 15px;
+  padding: 1px 15px;
   text-decoration: none;
   font-weight: bold;
   color: #069;
   border-right: 1px solid #ccc; 
 }
 .Welcome-text{
-  float: left;
-  padding-left: 5%;
-  padding-right: 15%;
+  text-align: center;
+  margin: auto;
+  width: 50%;
   padding-top: 5%;
+}
+#Pictures{
+  margin: auto;
+  width: 100%;
+  /* background: #e8f1f5; */
 }
 .Welcome-sub{
   font-size: calc(5px + 1vmin);
@@ -33,12 +40,11 @@
 }
 #Pictures{
     display: flex;
-    float: left;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
 }
+
 body{
   background-color:#FFFAFA;;
 }

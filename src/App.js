@@ -51,25 +51,13 @@ const App = () =>{
                 </section>
                 <section className = "Nav">
                   <ul id="nav">
+                    <Link to="/home">Home</Link>
                     <Link to="/projects">Projects</Link>
                     <Link to="/aboutme">About Me</Link>
                     <Link to="">Etc</Link>
                     <Link to="">Etc</Link>
                     <Link to="">Etc</Link>
-                    <Link to="">Etc</Link>
                   </ul>
-                </section>
-                <section>
-                  <GridList cellHeight={500} className={classes.gridList} cols={1}>
-                    <GridListTile key={"profile-picture"} cols={1 || 1}>
-                      <img src={"https://noahsaldanadesign.com/img/IMG_3958.jpg"} alt={""}/>
-                    </GridListTile>
-                  </GridList>
-                  <GridList cellHeight={500} className={classes.gridList} cols={1}>
-                    <GridListTile key={"profile-picture"} cols={1 || 1}>
-                      <img src={"https://noahsaldanadesign.com/img/Others/IMG_3000.png"} alt={""}/>
-                    </GridListTile>
-                  </GridList>
                 </section>
               </section>
               
@@ -80,8 +68,8 @@ const App = () =>{
               <Route path="/aboutme">
                 <AboutMePage />
               </Route>
-              <Route path="">
-                <ProjectsPage />
+              <Route path="/home">
+                <HomePageDirect />
               </Route>
             </Switch>
         </Router>
@@ -100,6 +88,7 @@ function ProjectsPage() {
         name = {entry.name}
         link = {entry.link}
         description = {entry.description}
+        style = {entry.style}
         />
       ))}
     </section>
@@ -127,7 +116,7 @@ function AboutMePage() {
 function HomePageDirect() {
   return <div className = "App">
     <header className="App-header">
-      <section id = "HomePageInfo">
+      <section id = "Pictures">
       {homepagedata.map((entry)=>(
         <HomePage
         key = {entry.title}

@@ -42,3 +42,7 @@
 .Recipe-image-section{
     align-items: center;
 }
+#Pictures{
+    width: 250;
+    height: 250;
+}
