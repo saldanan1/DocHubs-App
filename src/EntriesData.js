@@ -1,6 +1,7 @@
 export const entries = [
     {
       name: "Discord Elo Bot",
+      // eslint-disable-next-line
       description: "A discord bot aimed at tracking 'ratings' or 'elo' in online seasonal competitions. This is a passion project that started as a discussion between users on a Magic the Gathering(MTG) Discord Server.\
       With the recent quarantine, people are unable to leave their homes to play MTG at their local card stores. With this, the MTG community has taken the online Discord Servers by storm.\
       They have created competitive enviornments where users play online, and then 'log' them with the help of a Discord Bot.\
@@ -11,10 +12,12 @@ export const entries = [
         "https://noahsaldanadesign.com/img/Discord%20Bot3.png",
         "https://noahsaldanadesign.com/img/MongoDB.png"
       ],
-      style: "blue"
+      style: "blue",
+      externallink: "https://github.com/PlayingWithPower/DiscordBot"
     },
     {
       name: "NuVu",
+      // eslint-disable-next-line
       description: "'NuVu is a full-time innovation school for middle and high school students.\
       NuVu’s pedagogy is based on the architectural Studio model and geared around multi-disciplinary, collaborative projects.\
       We teach students how to navigate the messiness of the creative process, from inception to completion by prototyping and testing.'\
@@ -23,10 +26,12 @@ export const entries = [
       link: [
         "https://noahsaldanadesign.com/img/IMG_3177.jpg",
       ],
-      style: "white"
+      style: "white",
+      externallink: "https://cambridge.nuvustudio.com/studios/developing-design-adaptive-devices/skill-vest#tab-portfolio"
     },
     {
       name: "MTGM",
+      // eslint-disable-next-line
       description: "Magic the Gathering Manager (MTGM) is a life tracking app for the popular card game Magic the Gathering.\
       As frequent players, my friends and I were aware of similar products on the market.\
       Many of these apps had underlining problems ranging from paidfeatures to bad coding which led to bugs and glitches.\
@@ -36,6 +41,7 @@ export const entries = [
         "https://noahsaldanadesign.com/img/DMhomeicon.png",
         "https://noahsaldanadesign.com/img/MTGM%20in%20Store.png"
       ],
-      style: "blue"
+      style: "blue",
+      externallink: "https://apps.apple.com/us/app/mtgm/id1482197392"
     },
   ]

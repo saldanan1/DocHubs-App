@@ -34,10 +34,6 @@
 .Welcome-sub{
   font-size: calc(5px + 1vmin);
 }
-.Welcome-blurb{
-  font-size: calc(5px + 1vmin);
-  padding-top: 10%;
-}
 #Pictures{
     display: flex;
     flex-direction: column;
@@ -47,17 +43,6 @@
 
 body{
   background-color:#FFFAFA;;
-}
-.Page-nav{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  float: right;
-  padding-right: 25px;
-}
-.AboutMe{
-  float: left;
 }
 @media only screen and (max-device-width : 640px) {
   .HomePageInfo{

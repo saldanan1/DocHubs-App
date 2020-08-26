@@ -4,8 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
-import { homepagedata } from './HomePageData';
 
 const useStyles = makeStyles((theme) => ({
   gridList: {
@@ -17,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
+    fontFamily: "serif"
   },
   root:{
     display: 'flex',
@@ -42,9 +41,10 @@ export default function Pictures(props) {
   const classes = useStyles();
   
     return(
-      
       <div className={classes.root}>
-        <h1>{props.name}</h1>
+        <div>
+          <h1><a href={props.externallink} target="_blank"rel="noopener noreferrer">{props.name}</a></h1>
+        </div>
         <GridList cellHeight={700}className={classes.gridList} cols={1}>
           {props.link.map((tile) => (
             <GridListTile key={tile} cols={tile.cols || 1}>
@@ -53,7 +53,6 @@ export default function Pictures(props) {
           ))}
           <div className={classes.text}>{props.description}</div>
         </GridList>
-        
       </div>
     )
 }

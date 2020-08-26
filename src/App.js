@@ -1,47 +1,18 @@
 import React from 'react';
 import Pictures from "./Pictures"
 import HomePage from "./HomePage"
+import Graph from "./Graph"
 import './App.css';
 import { entries } from './EntriesData.js'
 import { aboutme } from './AboutMeData.js'
 import { homepagedata } from './HomePageData.js'
-import { Navbar, NavDropdown, Nav, Form, FormControl, Button } from 'react-bootstrap';
-
-import { makeStyles } from '@material-ui/core/styles';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    paddingBottom: 100
-  },
-  gridList: {
-    width: 400,
-    height: 775,
-  },
-  text:{
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    width: 500,
-    height: 300
-  }
-}));
-
 const App = () =>{
-    const classes = useStyles(); 
     return (
           <Router>
               <section className = "Welcome-text">
@@ -51,7 +22,7 @@ const App = () =>{
                 </section>
                 <section className = "Nav">
                   <ul id="nav">
-                    <Link to="/home">Home</Link>
+                    <Link to="/">Home</Link>
                     <Link to="/projects">Projects</Link>
                     <Link to="/aboutme">About Me</Link>
                     <Link to="">Etc</Link>
@@ -60,7 +31,7 @@ const App = () =>{
                   </ul>
                 </section>
               </section>
-              
+
             <Switch>
               <Route path="/projects">
                 <ProjectsPage />
@@ -68,11 +39,12 @@ const App = () =>{
               <Route path="/aboutme">
                 <AboutMePage />
               </Route>
-              <Route path="/home">
+              <Route path="/">
                 <HomePageDirect />
               </Route>
             </Switch>
         </Router>
+        
     );
 }
 export default App;
@@ -81,13 +53,13 @@ function ProjectsPage() {
   return <div className="App">
   <header className="App-header">
     <section id = "Pictures">
-    
       {entries.map((entry)=>(
         <Pictures
         key = {entry.name}
         name = {entry.name}
         link = {entry.link}
         description = {entry.description}
+        externallink = {entry.externallink}
         style = {entry.style}
         />
       ))}
@@ -95,11 +67,11 @@ function ProjectsPage() {
   </header>
   </div>;
 }
+
 function AboutMePage() {
   return <div className="App">
   <header className="App-header">
     <section id = "Pictures">
-    
       {aboutme.map((entry)=>(
         <Pictures
         key = {entry.name}

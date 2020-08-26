@@ -1,6 +1,7 @@
 export const aboutme = [
     {
       name: "Node JS Enthusiast",
+      // eslint-disable-next-line
       description: "Recently, I've begun an open sourced project for a community I am apart of. This has led to \
       me becoming a moderator for the project's discord. Among my duties maintaing the bot, the issues tab and submissions, \
       reaching out to users feedback and bug reporting has begun eating much of my time. We have a strong community forming\
@@ -11,6 +12,7 @@ export const aboutme = [
     },
     {
       name: "Personal Life",
+      // eslint-disable-next-line
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.",
       link: [
@@ -19,6 +21,7 @@ export const aboutme = [
     },
     {
       name: "Great dancer",
+      // eslint-disable-next-line
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.",
       link: [
