@@ -1,6 +1,5 @@
 import React from 'react';
 import './HomePage.css';
-import Graph from './Graph'
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -41,9 +40,6 @@ const useStyles = makeStyles((theme) => ({
     width: 500,
     height: 500
   },
-  sectionHeader:{
-    // backgroundColor: "#e8f1f5"
-  },
   text:{
     display: 'flex',
     flexWrap: 'wrap',
@@ -59,13 +55,6 @@ export default function HomePage(props) {
     return(
       <div className={classes.root}>
         <div className={classes.rootBlue}>
-          {/* <GridList cellHeight={300}className={classes.gridList} cols={1}>
-              <GridListTile key={"text-about-me"} cols={1 || 1}>
-              {homepagedata.map((tile) => (
-                  <div className={classes.text}>{tile.title}</div>
-              ))}
-              </GridListTile>
-          </GridList> */}
           <section className={classes.sectionHeader}>
             <section className={classes.sectionHeader}>
               <img className={classes.pictures} src={"https://noahsaldanadesign.com/img/IMG_3958.jpg"} alt={""}/>

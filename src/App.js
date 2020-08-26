@@ -60,7 +60,6 @@ function ProjectsPage() {
         link = {entry.link}
         description = {entry.description}
         externallink = {entry.externallink}
-        style = {entry.style}
         />
       ))}
     </section>
@@ -78,6 +77,7 @@ function AboutMePage() {
         name = {entry.name}
         link = {entry.link}
         description = {entry.description}
+        externallink = {entry.externallink}
         />
       ))}
     </section>
