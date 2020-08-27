@@ -1,7 +1,6 @@
 import React from 'react';
 import Pictures from "./Pictures"
 import HomePage from "./HomePage"
-import Graph from "./Graph"
 import './App.css';
 import { entries } from './EntriesData.js'
 import { aboutme } from './AboutMeData.js'

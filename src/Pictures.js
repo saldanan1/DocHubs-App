@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
-    fontFamily: "serif"
+    fontFamily: "sans-serif",
+
   },
   root:{
     display: 'flex',

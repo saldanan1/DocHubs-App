@@ -26,6 +26,9 @@
   width: 50%;
   padding-top: 5%;
 }
+h1, p{
+  font-family: sans-serif;
+}
 #Pictures{
   margin: auto;
   width: 100%;
@@ -40,13 +43,7 @@
     align-items: center;
     justify-content: center;
 }
-
 body{
   background-color:#FFFAFA;;
-}
-@media only screen and (max-device-width : 640px) {
-  .HomePageInfo{
-    background-color: blue;
-  }
 }
 

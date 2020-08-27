@@ -29,13 +29,6 @@ const useStyles = makeStyles((theme) => ({
     height: 750,
     float: "right"
   },
-  text:{
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    fontWeight: 'bold'
-  },
   pictures:{
     width: 500,
     height: 500
@@ -45,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
-    fontFamily: "serif",
+    fontFamily: "sans-serif",
     paddingLeft: "10%",
     paddingRight: "10%"
   },
@@ -65,11 +58,11 @@ export default function HomePage(props) {
           <section className={classes.sectionHeader}>
             <section className={classes.sectionHeader}>
               <div className={classes.text}>
-              Hello and welcome to my portfolio! A congregation of my experiences and thoughts. I'm a graduate from Washington University in St. Louis with a BS in Computer Science. 
+              <h1>This portfolio serves as a congregation of my experiences and thoughts. I'm a graduate from Washington University in St. Louis with a BS in Computer Science. 
               I bring a unique role to every team I am apart of: having technical experience from a Computer Science degree, 
               but also having the human centered design and creative problem solving experience gained from my work. 
               HCD and creative problem solving have been a key portion of my education and experiences.
-              My goal is to cater to user experience and accessibility above all else.
+              My goal is to cater to user experience and accessibility above all else.</h1>
               </div>
             </section>
           </section>
@@ -81,9 +74,6 @@ export default function HomePage(props) {
             </section>
           </section>
         </div>
-        {/* <section>
-              <Graph />
-            </section> */}
       </div>
     )
 }
