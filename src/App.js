@@ -24,9 +24,6 @@ const App = () =>{
                     <Link to="/">Home</Link>
                     <Link to="/projects">Projects</Link>
                     <Link to="/aboutme">About Me</Link>
-                    <Link to="">Etc</Link>
-                    <Link to="">Etc</Link>
-                    <Link to="">Etc</Link>
                   </ul>
                 </section>
               </section>
