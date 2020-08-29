@@ -33,13 +33,14 @@ const useStyles = makeStyles((themes) => ({
     [theme.breakpoints.up('lg')]: {
       width: "25%",
     },
+    paddingBottom: 100
   },
   root:{
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
-    paddingBottom: 100,
+    paddingBottom: 50,
     paddingTop: 200,
     backgroundColor: "#e8f1f5",
   },
@@ -63,7 +64,7 @@ export default function Pictures(props) {
         
         <div className={classes.text}>
           <h1 >{props.name}</h1>
-            {props.description}
+            <p>{props.description}</p>
             {/* <a href={props.externallink} target="_blank"rel="noopener noreferrer">Click here</a> */}
         </div>
         <GridList cellHeight={650}className={classes.gridList} cols={1}>
