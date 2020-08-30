@@ -14,19 +14,19 @@ import {
 const App = () =>{
     return (
           <Router>
-              <section className = "Welcome-text">
+              <div className = "Welcome-text">
                 <h1><strong>Hey, I'm Noah Saldaña</strong></h1>
-                <section className = "Welcome-sub">
+                <div className = "Welcome-sub">
                   <p>iOS Developer - Student Mentor - Human-Centered Designer</p>
-                </section>
-                <section className = "Nav">
+                </div>
+                <div className = "Nav">
                   <ul id="nav">
                     <Link to="/">Home</Link>
                     <Link to="/projects">Projects</Link>
                     <Link to="/aboutme">About Me</Link>
                   </ul>
-                </section>
-              </section>
+                </div>
+              </div>
 
             <Switch>
               <Route path="/projects">
@@ -48,7 +48,7 @@ export default App;
 function ProjectsPage() {
   return <div className="App">
   <header className="App-header">
-    <section id = "Pictures">
+    <div id = "Pictures">
       {entries.map((entry)=>(
         <Pictures
         key = {entry.name}
@@ -58,7 +58,7 @@ function ProjectsPage() {
         externallink = {entry.externallink}
         />
       ))}
-    </section>
+    </div>
   </header>
   </div>;
 }
@@ -66,7 +66,7 @@ function ProjectsPage() {
 function AboutMePage() {
   return <div className="App">
   <header className="App-header">
-    <section id = "Pictures">
+    <div id = "Pictures">
       {aboutme.map((entry)=>(
         <Pictures
         key = {entry.name}
@@ -76,7 +76,7 @@ function AboutMePage() {
         externallink = {entry.externallink}
         />
       ))}
-    </section>
+    </div>
   </header>
   </div>;
 }
@@ -84,7 +84,7 @@ function AboutMePage() {
 function HomePageDirect() {
   return <div className = "App">
     <header className="App-header">
-      <section id = "Pictures">
+      <div id = "Pictures">
       {homepagedata.map((entry)=>(
         <HomePage
         key = {entry.title}
@@ -92,7 +92,7 @@ function HomePageDirect() {
         description  = {entry.description}
         />
       ))}
-      </section>
+      </div>
     </header>
   </div>
 }
