@@ -1,5 +1,4 @@
 import React from 'react';
-import './HomePage.css';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -34,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     height: 500
   },
   text:{
+    fontSize: "calc(10px + 2vmin)",
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
@@ -48,31 +48,25 @@ export default function HomePage(props) {
     return(
       <div className={classes.root}>
         <div className={classes.rootBlue}>
-          <section className={classes.sectionHeader}>
-            <section className={classes.sectionHeader}>
+          <div className={classes.divHeader}>
               <img className={classes.pictures} src={"https://noahsaldanadesign.com/img/IMG_3958.jpg"} alt={""}/>
-            </section>
-          </section>
+            </div>
         </div>
         <div className={classes.rootWhite}>
-          <section className={classes.sectionHeader}>
-            <section className={classes.sectionHeader}>
+          <div className={classes.divHeader}>
               <div className={classes.text}>
-              <h1>This portfolio serves as a congregation of my experiences and thoughts. I'm a graduate from Washington University in St. Louis with a BS in Computer Science. 
-              I bring a unique role to every team I am apart of: having technical experience from a Computer Science degree, 
-              but also having the human centered design and creative problem solving experience gained from my work. 
-              HCD and creative problem solving have been a key portion of my education and experiences.
-              My goal is to cater to user experience and accessibility above all else.</h1>
+                <p>This portfolio serves as a congregation of my experiences and thoughts. I'm a graduate from Washington University in St. Louis with a BS in Computer Science. 
+                I bring a unique role to every team I am apart of: having technical experience from a Computer Science degree, 
+                but also having the human centered design and creative problem solving experience gained from my work. 
+                HCD and creative problem solving have been a key portion of my education and experiences.
+                My goal is to cater to user experience and accessibility above all else.</p>
               </div>
-            </section>
-          </section>
+          </div>
         </div>
         <div className={classes.rootBlue}>
-          <section className={classes.sectionHeader}>
-            <section className={classes.sectionHeader}>
+          <div className={classes.divHeader}>
               <img className={classes.pictures} src={"https://noahsaldanadesign.com/img/Others/IMG_3000.png"} alt={""}/>
-            </section>
-          </section>
+          </div>
         </div>
       </div>
     )

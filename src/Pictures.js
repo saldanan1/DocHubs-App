@@ -1,5 +1,4 @@
 import React from 'react';
-import './Pictures.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core'
 
@@ -21,6 +20,7 @@ const theme = createMuiTheme({
 const useStyles = makeStyles((themes) => ({
   text:{
     fontFamily: "sans-serif",
+    fontSize: "calc(7px + 2vmin)",
     [theme.breakpoints.down('xs')]: {
       width: "40%",
     },
@@ -61,7 +61,6 @@ export default function Pictures(props) {
   
     return(
       <div className={classes.root}>
-        
         <div className={classes.text}>
           <h1 >{props.name}</h1>
             <p>{props.description}</p>
@@ -72,7 +71,6 @@ export default function Pictures(props) {
             <GridListTile key={tile} cols={tile.cols || 1}>
                   <img src={tile} alt={tile}/>
             </GridListTile>
-            
           ))}
         </GridList>
       </div>

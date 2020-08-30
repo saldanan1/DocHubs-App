@@ -1,7 +1,7 @@
 import React from 'react';
 import Pictures from "./Pictures"
 import HomePage from "./HomePage"
-import './App.css';
+import './App.scss';
 import { entries } from './EntriesData.js'
 import { aboutme } from './AboutMeData.js'
 import { homepagedata } from './HomePageData.js'
@@ -14,20 +14,15 @@ import {
 const App = () =>{
     return (
           <Router>
-              <div className = "Welcome-text">
-                <h1><strong>Hey, I'm Noah Saldaña</strong></h1>
-                <div className = "Welcome-sub">
+              <div class="header">
+                  <h1><strong>Hey, I'm Noah Saldaña</strong></h1>
                   <p>iOS Developer - Student Mentor - Human-Centered Designer</p>
-                </div>
-                <div className = "Nav">
-                  <ul id="nav">
+                  <ul>
                     <Link to="/">Home</Link>
                     <Link to="/projects">Projects</Link>
                     <Link to="/aboutme">About Me</Link>
                   </ul>
                 </div>
-              </div>
-
             <Switch>
               <Route path="/projects">
                 <ProjectsPage />
@@ -48,7 +43,7 @@ export default App;
 function ProjectsPage() {
   return <div className="App">
   <header className="App-header">
-    <div id = "Pictures">
+    <div class="Pictures">
       {entries.map((entry)=>(
         <Pictures
         key = {entry.name}
@@ -66,7 +61,7 @@ function ProjectsPage() {
 function AboutMePage() {
   return <div className="App">
   <header className="App-header">
-    <div id = "Pictures">
+    <div class="Pictures">
       {aboutme.map((entry)=>(
         <Pictures
         key = {entry.name}
@@ -84,7 +79,7 @@ function AboutMePage() {
 function HomePageDirect() {
   return <div className = "App">
     <header className="App-header">
-      <div id = "Pictures">
+      <div class="Pictures">
       {homepagedata.map((entry)=>(
         <HomePage
         key = {entry.title}

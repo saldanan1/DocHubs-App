@@ -1,0 +1,38 @@
+body{
+  background-color:#FFFAFA;;
+}
+.header {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding-top: 5%;
+  font-family: sans-serif;
+  h1 {
+    font-size: calc(20px + 2vmin);
+  }
+  ul {
+    width: 100%;
+    margin: 0 0 3em 0;
+    padding: 0;
+    list-style: none;
+    background-color: #e8f1f5;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    a {
+      padding: 1px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #069;
+      border-right: 1px solid #ccc;
+    }
+    //& not working here? &:hover does not have desired result
+    a:hover {
+      color: black;
+    }
+  }
+  .Pictures{
+    margin: auto;
+    width: 100%;
+  }
+}
+
