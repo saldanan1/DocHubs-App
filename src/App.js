@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
   root:{
     backgroundColor: "#FFFAFA",
     flexGrow: 1,
+    marginTop: "5%",
     marginBottom: "5%"
   },
 }));
