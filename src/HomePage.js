@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
+import Grow from '@material-ui/core/Grow';
+
 const useStyles = makeStyles((theme) => ({
   root:{
     width: '100%',
@@ -46,29 +48,31 @@ const useStyles = makeStyles((theme) => ({
 export default function HomePage(props) {
   const classes = useStyles(); 
     return(
-      <div className={classes.root}>
-        <div className={classes.rootBlue}>
-          <div className={classes.divHeader}>
-              <img className={classes.pictures} src={"https://noahsaldanadesign.com/img/IMG_3958.jpg"} alt={""}/>
-            </div>
-        </div>
-        <div className={classes.rootWhite}>
-          <div className={classes.divHeader}>
-              <div className={classes.text}>
-                <p>This portfolio serves as a congregation of my experiences and thoughts. I'm a graduate from Washington University in St. Louis with a BS in Computer Science. 
-                I bring a unique role to every team I am apart of: having technical experience from a Computer Science degree, 
-                but also having the human centered design and creative problem solving experience gained from my work. 
-                HCD and creative problem solving have been a key portion of my education and experiences.
-                My goal is to cater to user experience and accessibility above all else.</p>
+      <Grow in={true}>
+        <div className={classes.root}>
+          <div className={classes.rootBlue}>
+            <div className={classes.divHeader}>
+                <img className={classes.pictures} src={"https://noahsaldanadesign.com/img/IMG_3958.jpg"} alt={""}/>
               </div>
           </div>
-        </div>
-        <div className={classes.rootBlue}>
-          <div className={classes.divHeader}>
-              <img className={classes.pictures} src={"https://noahsaldanadesign.com/img/Others/IMG_3000.png"} alt={""}/>
+          <div className={classes.rootWhite}>
+            <div className={classes.divHeader}>
+                <div className={classes.text}>
+                  <p>This portfolio serves as a congregation of my experiences and thoughts. I'm a graduate from Washington University in St. Louis with a BS in Computer Science. 
+                  I bring a unique role to every team I am apart of: having technical experience from a Computer Science degree, 
+                  but also having the human centered design and creative problem solving experience gained from my work. 
+                  HCD and creative problem solving have been a key portion of my education and experiences.
+                  My goal is to cater to user experience and accessibility above all else.</p>
+                </div>
+            </div>
+          </div>
+          <div className={classes.rootBlue}>
+            <div className={classes.divHeader}>
+                <img className={classes.pictures} src={"https://noahsaldanadesign.com/img/Others/IMG_3000.png"} alt={""}/>
+            </div>
           </div>
         </div>
-      </div>
+      </Grow>
     )
 }
 

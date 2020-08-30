@@ -5,6 +5,14 @@ import { createMuiTheme } from '@material-ui/core'
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Grow from '@material-ui/core/Grow';
+
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+
 const theme = createMuiTheme({
   breakpoints: {
     values: {
@@ -22,7 +30,7 @@ const useStyles = makeStyles((themes) => ({
     fontFamily: "sans-serif",
     fontSize: "calc(7px + 2vmin)",
     [theme.breakpoints.down('xs')]: {
-      width: "40%",
+      width: "60%",
     },
     [theme.breakpoints.up('sm')]: {
       width: "60%",
@@ -41,7 +49,7 @@ const useStyles = makeStyles((themes) => ({
     justifyContent: 'space-around',
     overflow: 'hidden',
     paddingBottom: 50,
-    paddingTop: 200,
+    paddingTop: 50,
     backgroundColor: "#e8f1f5",
   },
   gridList:{
@@ -54,26 +62,47 @@ const useStyles = makeStyles((themes) => ({
     [theme.breakpoints.down('sm')]: {
       width: "750px",
     },
+  },
+  cardContent:{
+    backgroundColor: "#FFAFA",
+  },
+  button:{
+    width: "100%"
   }
 }));
 export default function Pictures(props) {
   const classes = useStyles();
   
     return(
-      <div className={classes.root}>
-        <div className={classes.text}>
-          <h1 >{props.name}</h1>
-            <p>{props.description}</p>
-            {/* <a href={props.externallink} target="_blank"rel="noopener noreferrer">Click here</a> */}
+      <Grow in={true} timeout={1000}>
+        <div className={classes.root}>
+          <div className={classes.text}>
+            <Card className={classes.cardContent}>
+              <CardContent>
+                <Typography color="textPrimary" gutterBottom>
+                  <h1><strong>{props.name}</strong></h1>
+                </Typography>
+                <Typography variant="body1" color="textSecondary" component="p">
+                  {props.description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button className={classes.button} href={props.externallink} target="_blank"rel="noopener noreferrer" size="medium" variant="outlined">Learn More</Button>
+              </CardActions>
+            </Card>
+          </div>
+          <Card className={classes.cardContent}>
+            <GridList cellHeight={650}className={classes.gridList} cols={1}>
+              {props.link.map((tile) => (
+                <GridListTile key={tile} cols={tile.cols || 1}>
+                      <img src={tile} alt={tile}/>
+                </GridListTile>
+              ))}
+            </GridList>
+          </Card>
         </div>
-        <GridList cellHeight={650}className={classes.gridList} cols={1}>
-          {props.link.map((tile) => (
-            <GridListTile key={tile} cols={tile.cols || 1}>
-                  <img src={tile} alt={tile}/>
-            </GridListTile>
-          ))}
-        </GridList>
-      </div>
+      </Grow>
+      
     )
 }
 
