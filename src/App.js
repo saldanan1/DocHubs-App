@@ -33,15 +33,28 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const App = () =>{
+  var documentData;
+  try{
+    documentData = JSON.parse(localStorage.getItem('tabSelection'))
+  }
+  catch{
+    documentData = 0
+  }
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(documentData);
 
   const handleChange = (event, newValue) => {
+    try{
+      documentData = JSON.parse(localStorage.getItem('tabSelection'))
+    }
+    catch{
+      documentData = 0
+    }
+    localStorage.setItem('tabSelection',JSON.stringify(newValue));
     setValue(newValue);
   };
     return (
           <Router>
-            <Grow in={true}>
               <div className="header">
               <Card className={classes.root}>
                 <CardContent>
@@ -50,22 +63,22 @@ const App = () =>{
                     iOS Developer - Student Mentor - Human-Centered Designer
                   </Typography>
                 </CardContent>
-                  <CardContent>
-                    <Tabs
+                <CardContent>
+                <Tabs
                       value={value}
                       onChange={handleChange}
                       indicatorColor="primary"
                       textColor="primary"
                       centered
                     >
-                      <Tab to='/' component={Link} label='Home'/>
-                      <Tab to='/projects' component={Link} label='Projects'/>
-                      <Tab to='/aboutme' component={Link} label='About Me'/>
+                      <Tab key={0} to='/' component={Link} label='Home'/>
+                      <Tab key={1} to='/projects' component={Link} label='Projects'/>
+                      <Tab key={2} to='/aboutme' component={Link} label='About Me'/>
                     </Tabs>
-                  </CardContent>
+                </CardContent>
               </Card>
-              </div>  
-             </Grow>
+              </div>
+            
             <Switch>
               <Route path="/projects">
                 <ProjectsPage />
@@ -77,8 +90,8 @@ const App = () =>{
                 <HomePageDirect />
               </Route>
             </Switch>
-        </Router>
-        
+            
+        </Router>        
     );
 }
 export default App;
@@ -104,7 +117,7 @@ function ProjectsPage() {
 function AboutMePage() {
   return <div className="App">
   <header className="App-header">
-    <div class="Pictures">
+    <div className="Pictures">
       {aboutme.map((entry)=>(
         <Pictures
         key = {entry.name}
