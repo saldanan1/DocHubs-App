@@ -58,7 +58,7 @@ const App = () =>{
               <div className="header">
               <Card className={classes.root}>
                 <CardContent>
-                  <Typography color="textPrimary" gutterBottom>
+                  <Typography color="textPrimary">
                     <h1><strong>Hey, I'm Noah Saldaña</strong></h1>
                     iOS Developer - Student Mentor - Human-Centered Designer
                   </Typography>
