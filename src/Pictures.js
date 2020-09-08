@@ -13,6 +13,7 @@ import Grow from '@material-ui/core/Grow';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+
 const theme = createMuiTheme({
   breakpoints: {
     values: {
@@ -50,12 +51,10 @@ const useStyles = makeStyles((themes) => ({
     overflow: 'hidden',
     paddingBottom: 50,
     paddingTop: 50,
-    backgroundColor: "#e8f1f5",
   },
   gridList:{
-    height: "750px",
-    alignSelf: "center",
-    width: "1000px",
+    height: "100%",
+    width: 1000,
     [theme.breakpoints.down('xs')]: {
       width: "200px",
     },
@@ -63,11 +62,12 @@ const useStyles = makeStyles((themes) => ({
       width: "750px",
     },
   },
-  cardContent:{
-    backgroundColor: "#FFAFA",
-  },
   button:{
     width: "100%"
+  },
+  Pictures:{
+    maxWidth: "100%",
+    height: "auto",
   }
 }));
 export default function Pictures(props) {
@@ -77,13 +77,19 @@ export default function Pictures(props) {
       <Grow in={true} timeout={1000}>
         <div className={classes.root}>
           <div className={classes.text}>
-            <Card className={classes.cardContent}>
+            <Card>
               <CardContent>
-                <Typography color="textPrimary" gutterBottom>
+                <Typography color="textPrimary">
                   <h1><strong>{props.name}</strong></h1>
                 </Typography>
-                <Typography variant="body1" color="textSecondary" component="p">
-                  {props.description}
+                <Typography variant="h6" color="textPrimary" paragraph="true">
+                  <strong><i>{props.title}</i></strong>
+                </Typography>
+                <Typography variant="body1" color="textPrimary"  paragraph="true">
+                  {props.paragraph1}
+                </Typography>
+                <Typography variant="body1" color="textPrimary"  paragraph="true">
+                  {props.paragraph2}
                 </Typography>
               </CardContent>
               <CardActions>
@@ -95,7 +101,7 @@ export default function Pictures(props) {
             <GridList cellHeight={650}className={classes.gridList} cols={1}>
               {props.link.map((tile) => (
                 <GridListTile key={tile} cols={tile.cols || 1}>
-                      <img src={tile} alt={tile}/>
+                      <img className={classes.Pictures} src={tile} alt={tile}/>
                 </GridListTile>
               ))}
             </GridList>

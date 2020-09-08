@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { createMuiTheme, Button } from '@material-ui/core'
 
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Card from '@material-ui/core/Card';
@@ -9,21 +8,8 @@ import Grow from '@material-ui/core/Grow';
 import Grid from '@material-ui/core/Grid';
 
 import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
 
 
-const theme = createMuiTheme({
-  breakpoints: {
-    values: {
-      mobile: 200,
-      xs: 300,
-      sm: 700,
-      md: 1000,
-      lg: 1400,
-      xl: 1920,
-    },
-  },
-})
 const useStyles = makeStyles((themes) => ({
   root: {
   },

@@ -2,10 +2,13 @@ export const aboutme = [
     {
       name: "Node JS Enthusiast",
       // eslint-disable-next-line
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa",
+      // eslint-disable-next-line
+      paragraph1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.",
+      // eslint-disable-next-line
+      paragraph2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.",
       link: [
@@ -17,11 +20,13 @@ export const aboutme = [
     },
     {
       name: "Personal Life",
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa",
       // eslint-disable-next-line
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
+      paragraph1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.",
+      // eslint-disable-next-line
+      paragraph2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.",
       link: [
@@ -34,10 +39,13 @@ export const aboutme = [
     {
       name: "Great dancer",
       // eslint-disable-next-line
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa",
+      // eslint-disable-next-line
+      paragraph1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.",
+      // eslint-disable-next-line
+      paragraph2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.\
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.",
       link: [

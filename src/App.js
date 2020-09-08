@@ -7,12 +7,9 @@ import { aboutme } from './AboutMeData.js'
 import { homepagedata } from './HomePageData.js'
 
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Grow from '@material-ui/core/Grow';
 import Typography from '@material-ui/core/Typography';
 
-import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
@@ -104,8 +101,10 @@ function ProjectsPage() {
         <Pictures
         key = {entry.name}
         name = {entry.name}
+        title = {entry.title}
         link = {entry.link}
-        description = {entry.description}
+        paragraph1 = {entry.paragraph1}
+        paragraph2 = {entry.paragraph2}
         externallink = {entry.externallink}
         />
       ))}
@@ -122,8 +121,10 @@ function AboutMePage() {
         <Pictures
         key = {entry.name}
         name = {entry.name}
+        title = {entry.title}
         link = {entry.link}
-        description = {entry.description}
+        paragraph1 = {entry.paragraph1}
+        paragraph2 = {entry.paragraph2}
         externallink = {entry.externallink}
         />
       ))}
