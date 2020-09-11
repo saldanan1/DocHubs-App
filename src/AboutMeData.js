@@ -13,6 +13,7 @@ export const aboutme = [
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim quam, faucibus eget diam a, aliquet scelerisque lorem. Nullam massa.",
       link: [
         'https://noahsaldanadesign.com/img/Others/NodeJS.png',
+        'https://noahsaldanadesign.com/img/Others/IMG_3001.png',
       ],
       externallink: [
         "https://github.com/PlayingWithPower/DiscordBot"

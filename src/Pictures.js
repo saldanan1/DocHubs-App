@@ -31,18 +31,18 @@ const useStyles = makeStyles((themes) => ({
     fontFamily: "sans-serif",
     fontSize: "calc(7px + 2vmin)",
     [theme.breakpoints.down('xs')]: {
-      width: "60%",
+      width: "90%",
     },
     [theme.breakpoints.up('sm')]: {
-      width: "60%",
+      width: "90%",
     },
     [theme.breakpoints.up('md')]: {
-      width: "75%",
+      width: "90%",
     },
     [theme.breakpoints.up('lg')]: {
       width: "25%",
     },
-    paddingBottom: 100
+    paddingBottom: "10%"
   },
   root:{
     display: 'flex',
@@ -52,23 +52,36 @@ const useStyles = makeStyles((themes) => ({
     paddingBottom: 50,
     paddingTop: 50,
   },
-  gridList:{
-    height: "100%",
-    width: 1000,
+  pictureCardContent:{
     [theme.breakpoints.down('xs')]: {
-      width: "200px",
+      width: "90%",
     },
-    [theme.breakpoints.down('sm')]: {
-      width: "750px",
+    [theme.breakpoints.up('sm')]: {
+      width: "90%",
     },
+    [theme.breakpoints.up('md')]: {
+      width: "90%",
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: "70%",
+    },
+  },
+  textCardContent:{
+  },
+  gridList:{
+    height: "auto",
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
   },
   button:{
     width: "100%"
   },
   Pictures:{
-    maxWidth: "100%",
-    height: "auto",
-  }
+    width: "100%",
+    height: "100%",
+  },
 }));
 export default function Pictures(props) {
   const classes = useStyles();
@@ -77,8 +90,8 @@ export default function Pictures(props) {
       <Grow in={true} timeout={1000}>
         <div className={classes.root}>
           <div className={classes.text}>
-            <Card>
-              <CardContent>
+            <Card className={classes.textCardContent}>
+              <CardContent >
                 <Typography color="textPrimary">
                   <h1><strong>{props.name}</strong></h1>
                 </Typography>
@@ -97,8 +110,8 @@ export default function Pictures(props) {
               </CardActions>
             </Card>
           </div>
-          <Card className={classes.cardContent}>
-            <GridList cellHeight={650}className={classes.gridList} cols={1}>
+          <Card className={classes.pictureCardContent}>
+            <GridList cellHeight={"100%"}className={classes.gridList} cols={1}>
               {props.link.map((tile) => (
                 <GridListTile key={tile} cols={tile.cols || 1}>
                       <img className={classes.Pictures} src={tile} alt={tile}/>

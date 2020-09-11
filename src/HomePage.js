@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core'
 
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Card from '@material-ui/core/Card';
@@ -7,19 +8,32 @@ import CardContent from '@material-ui/core/CardContent';
 import Grow from '@material-ui/core/Grow';
 import Grid from '@material-ui/core/Grid';
 
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-
+const theme = createMuiTheme({
+  breakpoints: {
+    values: {
+      mobile: 200,
+      xs: 300,
+      sm: 700,
+      md: 1000,
+      lg: 1400,
+      xl: 1920,
+    },
+  },
+})
 const useStyles = makeStyles((themes) => ({
   root: {
-  },
-  rowContent:{
     flexDirection: "row",
     display: 'flex',
     width: '100%',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
+  },
+  rowContent:{
+   
   },
   largePicture:{
     width: "100%",
@@ -55,24 +69,23 @@ const useStyles = makeStyles((themes) => ({
     margin: "5%"
   },
   progressCard:{
-    // [theme.breakpoints.down('xs')]: {
-    //   width: "100%",
-    // },
-    // [theme.breakpoints.up('sm')]: {
-    //   width: "80%",
-    // },
-    // [theme.breakpoints.up('md')]: {
-    //   width: "80%",
-    // },
-    // [theme.breakpoints.up('lg')]: {
-    //   width: "100%",
-    // },
     width: "90%",
     margin: "5%",
     backgroundColor: "#FFAFA",
   },
   Grid:{
-    width: "50%"
+    [theme.breakpoints.down('xs')]: {
+      width: "100%",
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: "100%",
+    },
+    [theme.breakpoints.up('md')]: {
+      width: "50%",
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: "50%",
+    },
   },
   socialCard:{
     width: "40%",
@@ -133,7 +146,7 @@ export default function HomePage(props) {
                     </CardContent>
                   </Card>
                 </Grid>
-                {/* <Grid>
+                <Grid>
                   <Card className={classes.progressCard}>
                     <CardContent>
                         <div className={classes.progressTitle}>Contact Me</div>
@@ -141,18 +154,17 @@ export default function HomePage(props) {
                     <Card className={classes.socialCard}>
                         <Button className={classes.button} href={'https://www.linkedin.com/in/noahsaldana/'} target="_blank"rel="noopener noreferrer" size="medium" variant="outlined">LinkedIn</Button>
                       </Card>
-                      <Card variant="outlined" className={classes.socialCard}>
+                      <Card className={classes.socialCard}>
                         <Button className={classes.button} href={'https://github.com/saldanan1'} target="_blank"rel="noopener noreferrer" size="medium" variant="outlined">GitHub</Button>
                       </Card>
-                      <Card variant="outlined" className={classes.socialCard}>
-                        <Button className={classes.button} href={'https://www.linkedin.com/in/noahsaldana/'} target="_blank"rel="noopener noreferrer" size="medium" variant="outlined">Email</Button>
+                      <Card className={classes.socialCard}>
+                        <Button className={classes.button} href={'https://www.linkedin.com/in/noahsaldana/'} target="_blank"rel="noopener noreferrer" size="medium" variant="outlined">Something Else</Button>
                       </Card>
                   </Card>
-                </Grid> */}
+                </Grid>
               </Grid>
           </Grid>
           </div>
       </Grow>
     )
 }
-
