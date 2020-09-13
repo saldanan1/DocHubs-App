@@ -32,12 +32,11 @@ const useStyles = makeStyles((themes) => ({
     justifyContent: 'space-around',
     overflow: 'hidden',
   },
-  rowContent:{
-   
-  },
   largePicture:{
-    width: "100%",
-    height: "100%"
+    width: "80%",
+    height: "80%",
+    paddingLeft: "10%",
+    // paddingTop: "5%"
   },
   text:{
     fontSize: "calc(10px + 2vmin)",
@@ -51,7 +50,7 @@ const useStyles = makeStyles((themes) => ({
     width: "100%"
   },
   progress:{
-   margin: "5%"
+   margin: "2%"
   },
   progressText:{
     fontSize: "calc(10px + 2vmin)",
@@ -64,13 +63,15 @@ const useStyles = makeStyles((themes) => ({
     fontWeight: "bold",
   },
   profilePictureCard:{
-    width: "90%",
+    width: "70%",
+    marginLeft: "15%",
     backgroundColor: "#FFAFA",
-    margin: "5%"
+    margin: "2%"
   },
   progressCard:{
-    width: "90%",
-    margin: "5%",
+    width: "70%",
+    marginRight: "15%",
+    margin: "2%",
     backgroundColor: "#FFAFA",
   },
   Grid:{
@@ -99,7 +100,7 @@ export default function HomePage(props) {
     return(
       <Grow in={true} timeout={1000}>
           <div className={classes.root}>
-          <Grid container spacing={3}>
+          <Grid container spacing={1}>
               <Grid className={classes.Grid}>
                 <Card className={classes.profilePictureCard}>
                   <CardContent>
@@ -142,6 +143,10 @@ export default function HomePage(props) {
                       <div className={classes.progress}>
                         <div className={classes.progressText}>C#</div>
                         <LinearProgress className={classes.progress} variant="determinate" value={50} />
+                      </div>
+                      <div className={classes.progress}>
+                        <div className={classes.progressText}>Python</div>
+                        <LinearProgress className={classes.progress} variant="determinate" value={40} />
                       </div>
                     </CardContent>
                   </Card>
