@@ -73,6 +73,9 @@ const useStyles = makeStyles((themes) => ({
     marginRight: "15%",
     margin: "2%",
     backgroundColor: "#FFAFA",
+    [theme.breakpoints.down('md')]:{
+      marginLeft: "15%",
+    }
   },
   Grid:{
     [theme.breakpoints.down('xs')]: {
